@@ -243,6 +243,8 @@ You need to have the argus setup in a virtualenv before this step.
 
 **IMPORTANT 6:** Because of some changes in Mitaka we have to edit in /etc/heat/heat.conf the 'trusts_delegated_roles' field. To avoid any 'missing required credential' type of errors, that field should be left empty.
 
+**IMPORTANT 7:** Regarding NTP server errors. In /etc/neutron/dnsmasq-neutron.conf the line 'dhcp-option-force=42,188.214.141.10' should exist. Also argus should be able to read from that file.
+
 
 ####NOTE: by default ```$youranswerfile``` is called packstack-answer-$date-$time.txt
 
